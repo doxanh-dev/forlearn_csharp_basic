@@ -1,0 +1,34 @@
+﻿<Window x:Class="BaiTap004_GiaiPTBacMotHai.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaiTap004_GiaiPTBacMotHai"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Bài tập 004 - Giải PT bậc một, bậc hai" Height="350" Width="380">
+    <Grid>
+        <Label Name="labelGiaiPhuongTrinh" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20" Height="35" VerticalAlignment="Top" FontWeight="Bold" Foreground="Red">Giải Phương Trình</Label>
+
+        <Label Name="labelMoiBanChon" Width="100" Height="25"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,40,0,0">Mời bạn chọn</Label>
+
+        <RadioButton Name="radioButtonGiaiPTBacMot" IsChecked="True" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,70,0,0">Giải Phương Trình Bậc 1</RadioButton>
+        <RadioButton Name="radioButtonGiaiPTBacHai" IsChecked="False" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,90,0,0" Checked="radioButtonGiaiPTBacHai_Checked" Unchecked="radioButtonGiaiPTBacHai_UnChecked">Giải Phương Trình Bậc 2</RadioButton>
+
+        <Label Name="labelNhapA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="25" Margin="20,110,0,0">Nhập a:</Label>
+        <TextBox Name="textBoxNhapA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="25" BorderThickness="2" Margin="80,110,0,0" PreviewTextInput="textBoxNhapA_PreviewTextInput"></TextBox>
+        <Button Name="buttonGiai" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="25" Margin="0,110,20,0" Click="buttonGiai_Click">Giải</Button>
+
+        <Label Name="labelNhapB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="25" Margin="20,140,0,0">Nhập b:</Label>
+        <TextBox Name="textBoxNhapB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="25" BorderThickness="2" Margin="80,140,0,0" PreviewTextInput="textBoxNhapB_PreviewTextInput"></TextBox>
+        <Button Name="buttonXoa" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="25" Margin="0,140,20,0" Click="buttonXoa_Click">Xóa</Button>
+        
+        <Label Name="labelNhapC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="25" Margin="20,170,0,0">Nhập c:</Label>
+        <TextBox Name="textBoxNhapC" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="25" BorderThickness="2" Margin="80,170,0,0" PreviewTextInput="textBoxNhapC_PreviewTextInput"></TextBox>
+        <Button Name="buttonThoat" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="25" Margin="0,170,20,0" Click="buttonThoat_Click">Thoát</Button>
+
+        <Label Name="labelKetQua" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Height="25" Margin="20,210,0,0">Kết quả:</Label>
+        <TextBox Name="textBoxKetQua" IsEnabled="False" HorizontalAlignment="Right" VerticalAlignment="Top" Width="270" Height="95" BorderThickness="2" Margin="0,210,20,0"></TextBox>
+    
+    </Grid>
+</Window>

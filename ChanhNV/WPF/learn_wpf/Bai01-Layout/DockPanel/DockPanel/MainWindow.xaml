@@ -1,0 +1,23 @@
+﻿<Window x:Class="DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DockPanel"
+        mc:Ignorable="d"
+        Title="DockPanel" Height="450" Width="800">
+    <Grid>
+        <!--Dùng DockPanel-->
+        <DockPanel>
+            <TextBlock FontSize="16" DockPanel.Dock="Top" Foreground="#58290A">
+             Control 1: Bám trên
+            </TextBlock>
+            <Button DockPanel.Dock="Right">Control 2: bám phải</Button>
+            <Button DockPanel.Dock="Bottom">Control 3: bám dưới</Button>
+            <Button DockPanel.Dock="Right">Control 4: bám phải</Button>
+            <Border BorderBrush="#feca00" BorderThickness="2">
+             <TextBlock>Control 5: bình thường</TextBlock>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>

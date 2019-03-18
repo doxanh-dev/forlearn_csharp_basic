@@ -1,0 +1,73 @@
+﻿<Window x:Class="Wpf_BaiTap002.ThemThiSinh"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_BaiTap002"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ThemThiSinh" Height="350" Width="480">
+    <StackPanel Margin="20,10">
+        <TextBlock Text="Thêm Thí sinh" FontFamily="Arial"
+                   FontStyle="Italic"
+                   FontWeight="Bold"
+                   FontSize="20"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+        </TextBlock>
+        
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Loại thí sinh" HorizontalAlignment="Left" Width="200">
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton GroupName="LoaiThiSinh" Name="radioButtonChuyen" IsChecked="True" Content="Chuyên" Margin="0,0,20,0"></RadioButton>
+                    <RadioButton GroupName="LoaiThiSinh" Name="radioButtonSieuCup" IsChecked="False" Content="Siêu cúp"></RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                <TextBlock Text="Số báo danh: " Height="20"></TextBlock>
+                <TextBox MaxLength="5" Name="textBoxSoBaoDanh" BorderThickness="2" Width="100" Height="25" Background="Yellow"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="15,10,0,0">
+            <TextBlock Width="50" Text="Họ Tên"></TextBlock>
+            <TextBox Name="textBoxHoTen" Width="290" Margin="20,0,0,0" BorderThickness="2"></TextBox>
+        </StackPanel>
+
+        <StackPanel Margin="15,10,0,0" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Điểm bài 1:"></TextBlock>
+                <TextBox MaxLength="2" Name="textBoxDiemBai01" Margin="10,0,0,0" BorderThickness="2" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                <TextBlock Text="Điểm Tiếng Anh:"></TextBlock>
+                <TextBox MaxLength="2" Name="textBoxDiemTA" Margin="10,0,0,0" BorderThickness="2" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="15,10,0,0" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Điểm bài 2:"></TextBlock>
+                <TextBox MaxLength="2" Name="textBoxDiemBai02" Margin="10,0,0,0" BorderThickness="2" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
+                <TextBlock Text="Điểm Cơ Sở dữ liệu:"></TextBlock>
+                <TextBox MaxLength="2" Name="textBoxDiemCSDL" Margin="10,0,0,0" BorderThickness="2" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="15,10,0,0" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Điểm bài 3:"></TextBlock>
+                <TextBox MaxLength="2" Name="textBoxDiemBai03" Margin="10,0,0,0" BorderThickness="2" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="buttonCapNhat" Width="100" Height="30" Margin="0,0,20,0" Content="Cập nhật"></Button>
+            <Button Name="buttonThoat" Width="100" Height="30" Content="Thoát"></Button>
+        </StackPanel>
+
+    </StackPanel>
+    
+</Window>

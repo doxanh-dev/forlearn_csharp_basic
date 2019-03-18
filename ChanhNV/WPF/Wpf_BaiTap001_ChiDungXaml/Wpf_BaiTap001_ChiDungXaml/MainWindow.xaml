@@ -1,0 +1,34 @@
+﻿<Window x:Class="Wpf_BaiTap001_ChiDungXaml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_BaiTap001_ChiDungXaml"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <StackPanel>
+            <Label Name="labelTitle" HorizontalAlignment="Center" Height="30" Margin="0,10,0,0" FontSize="13" Content="Viết vào Textbox hiện ra label"></Label>
+            <TextBox Name="textBoxWrite" Height="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" BorderThickness="2">
+            </TextBox>
+
+            <Label Name="labelChon" HorizontalAlignment="Center" Height="30" Margin="0,10,0,0" FontSize="15">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Content" Value="Di chuột vào tôi để chuyển sang màu đỏ"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"></Setter>
+                            </Trigger>
+
+                            <DataTrigger Binding="{Binding Path=Text, ElementName=textBoxWrite}" Value="">
+                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Wpf_BaiTap001_DungCSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_BaiTap001_DungCSharp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400">
+    <Grid>
+        <Label Name="labelTitle" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Margin="0,10,0,0">Viết vào textbox để hiện ra label</Label>
+
+        <TextBox Name="textBoxWrite"  Height="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0" BorderThickness="2" KeyDown="TextBoxWrite_KeyDown" KeyUp="TextBoxWrite_KeyUp"></TextBox>
+
+        <Label Name="labelChuyenMauDo" Visibility="Hidden" Height="30" Width="330" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" MouseEnter="LabelChuyenMauDo_MouseEnter" MouseLeave="LabelChuyenMauDo_MouseLeave">Di chuột vào Label thì Content chuyển màu đỏ</Label>
+
+    </Grid>
+</Window>

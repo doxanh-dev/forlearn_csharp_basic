@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaGiac", "DaGiac\DaGiac.csproj", "{582D1BF8-C536-410F-97B3-8B13A0D5CCBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{582D1BF8-C536-410F-97B3-8B13A0D5CCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582D1BF8-C536-410F-97B3-8B13A0D5CCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582D1BF8-C536-410F-97B3-8B13A0D5CCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582D1BF8-C536-410F-97B3-8B13A0D5CCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {474B1145-F5C4-4A9E-85DC-DD0B4E60A03F}
+	EndGlobalSection
+EndGlobal

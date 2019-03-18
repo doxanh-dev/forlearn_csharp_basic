@@ -1,0 +1,19 @@
+﻿<Window x:Class="ChuoiDoanThang.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChuoiDoanThang"
+        mc:Ignorable="d"
+        Title="Chuỗi đoạn thẳng - Polyline" Height="338" Width="324">
+    <Grid>
+        <Canvas Height="300" Width="300">
+            <!--Vẽ một chuỗi đoạn thẳng gồm ba đoạn nối tiếp nhau được nối bởi bốn đỉnh (X,Y) = (10,110) (60,10) (110,110) và (160,110)-->
+            <Polyline Points="10,110 60,10 110,110 160,110" Stroke="Black" StrokeThickness="4" Canvas.Left="0" Canvas.Top="80" />
+            <!--Vẽ một chuỗi đoạn thẳng gồm hai đoạn nối tiếp nhau với nét đứt được nối bởi ba đỉnh (X,Y) = (10,110) (110,110) và (110,10)-->
+            <Polyline Points="10,110 110,110 110,10" Stroke="Blue" StrokeThickness="4" StrokeDashArray="4 1 2 1" Canvas.Left="180" Canvas.Top="80" />
+
+        </Canvas>
+        
+    </Grid>
+</Window>

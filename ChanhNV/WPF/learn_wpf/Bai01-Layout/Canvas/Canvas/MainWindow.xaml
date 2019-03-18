@@ -1,0 +1,23 @@
+﻿<Window x:Class="Canvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Canvas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!--Dùng Canvas-->
+        <Canvas Background="Beige">
+            <!--canh trên 10, canh trái 20-->
+            <TextBlock FontSize="16" Canvas.Top="10" Canvas.Left="20" Foreground="#58290A">
+             Chú cào cào nhỏ, xanh như hạt đỗ. Chú cào cào nhỏ, xanh như hạt đỗ
+            </TextBlock>
+            <!--canh dưới 25, canh phải 50-->
+            <Button Canvas.Bottom="25" Canvas.Right="50" Width="100">Control 2</Button>
+            <Border BorderBrush="#feca00" BorderThickness="2" Height="50" Width="50" Canvas.Top="20" Canvas.Left="50">
+                <TextBlock>Control 3</TextBlock>
+            </Border>
+        </Canvas>
+    </Grid>
+</Window>

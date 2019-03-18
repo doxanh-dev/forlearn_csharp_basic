@@ -1,0 +1,72 @@
+﻿<Window x:Class="XayDungMenuVaToobar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XayDungMenuVaToobar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            
+            <!--Khai báo Tài nguyên ảnh icon cần sử dụng-->
+            <StackPanel.Resources>
+                <Image x:Key="inc" Source="Resources/Inc.PNG" Width="16" Height="16"></Image>
+                <Image x:Key="dec" Source="Resources/Dec.PNG" Width="16" Height="16"></Image>
+                <Image x:Key="copy" Source="Resources/Copy.png" Width="16" Height="16"></Image>
+                <Image x:Key="cut" Source="Resources/Cut.PNG" Width="16" Height="16"></Image>
+                <Image x:Key="paste" Source="Resources/Paste.PNG" Width="16" Height="16"></Image>
+                <Image x:Key="bold" Source="Resources/Bold.PNG" Width="16" Height="16"></Image>
+                <Image x:Key="italic" Source="Resources/Italic.PNG" Width="16" Height="16"></Image>
+            </StackPanel.Resources>
+
+            <!--Khai báo thanh thực đơn-->
+            <Menu Name="Menu_main">
+                <MenuItem Header="_Edit" >
+                   <MenuItem Command="ApplicationCommands.Copy" ToolTip="Copy văn bản" Icon="{StaticResource copy}"/>
+                    <MenuItem Command="ApplicationCommands.Cut" ToolTip="Cắt văn bản" Icon="{StaticResource cut}"/>
+                    <MenuItem Command="ApplicationCommands.Paste" ToolTip="Dán văn bản" Icon="{StaticResource paste}" />
+                </MenuItem>
+                <MenuItem Header="_Font" >
+                    <MenuItem Header="_Bold" Name="Menu21" ToolTip="Chữ đậm" IsCheckable="True" Checked="Bold_Checked" Unchecked="Bold_Unchecked" Icon="{StaticResource bold}"/>
+                    <MenuItem Header="_Italic" Name="Menu22" ToolTip="Chữ nghiêng" IsCheckable="True" Checked="Italic_Checked" Unchecked="Italic_Unchecked" Icon="{StaticResource italic}"/>
+                    <Separator/>
+                    <MenuItem Header="_Increase Font Size" ToolTip="Tăng cỡ chữ" Icon="{StaticResource inc}" Click="IncreaseFont_Click"/>
+                    <MenuItem Header="_Decrease Font Size" ToolTip="Giảm cỡ chữ" Icon="{StaticResource dec}" Click="DecreaseFont_Click"/>
+                </MenuItem>
+            </Menu>
+
+            <!--Khai báo thanh công cụ-->            <ToolBar Height="26" Name="toolBar1" Width="280" HorizontalAlignment="Left" >
+                <Button Height="23" Name="button1" Width="23" Command="ApplicationCommands.Copy" ToolTip="Copy văn bản">
+                    <Image Source="Resources/Copy.png" Width="16" Height="16" HorizontalAlignment="Left" />
+                </Button>
+                <Button Height="23" Name="button2" Width="23" Command="ApplicationCommands.Cut" ToolTip="Cắt văn bản">
+                    <Image Source="Resources/Cut.png" Width="16" Height="16" HorizontalAlignment="Left" />
+                </Button>
+                <Button Height="23" Name="button3" ToolTip="Dán văn bản" Width="23" Command="ApplicationCommands.Paste" >
+                    <Image Source="Resources/Paste.png" Width="16" Height="16" HorizontalAlignment="Left" />
+                </Button>
+                <Separator/>
+                <CheckBox Name="checkBoxChuDam" ToolTip="Chữ đậm" Checked="Bold_Checked" Unchecked="Bold_Unchecked">
+                    <Image Source="Resources/bold.png" Width="16" Height="16" HorizontalAlignment="Left" />
+                </CheckBox>
+                <CheckBox Name="checkBoxChuNghieng" ToolTip="Chữ nghiêng" Checked="Italic_Checked" Unchecked="Italic_Unchecked">
+                    <Image Source="Resources/Italic.png" Width="16" Height="16" HorizontalAlignment="Left" />
+                </CheckBox>
+                <Separator/>
+                <Button Height="23" Name="button6" ToolTip="Tăng cỡ chữ" Width="23" Click="IncreaseFont_Click">
+                    <Image Source="Resources/Inc.PNG" Width="16" Height="16" HorizontalAlignment="Left" />
+                </Button>
+                <Button Height="23" Name="button7" ToolTip="Giảm cỡ chữ" Width="23" Click="DecreaseFont_Click">
+                    <Image Source="Resources/Dec.PNG" Width="16" Height="16" HorizontalAlignment="Left" />
+                </Button>
+            </ToolBar>
+
+            <!--Khai báo hộp soạn thảo-->
+            <TextBox Name="textBoxHienThi" TextWrapping="Wrap" Margin="2">
+                Chú cào cào nhỏ, ngồi trong đám cỏ.
+            </TextBox>
+
+        </StackPanel>
+    </Grid>
+</Window>

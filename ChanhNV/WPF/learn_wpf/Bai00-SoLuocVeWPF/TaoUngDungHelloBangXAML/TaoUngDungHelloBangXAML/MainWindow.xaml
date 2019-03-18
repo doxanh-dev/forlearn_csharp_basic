@@ -1,0 +1,22 @@
+﻿<Window x:Class="TaoUngDungHelloBangXAML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaoUngDungHelloBangXAML"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button
+            Click="btnHello_Click"
+            Name="btnHello"
+            Margin="100"
+            >
+            <Button.LayoutTransform>
+                <ScaleTransform ScaleX="3" ScaleY="3"
+                    ></ScaleTransform>
+            </Button.LayoutTransform>
+            Hello World
+        </Button>
+    </Grid>
+</Window>
