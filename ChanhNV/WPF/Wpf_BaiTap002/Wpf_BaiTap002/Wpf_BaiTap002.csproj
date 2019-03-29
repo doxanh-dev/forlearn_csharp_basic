@@ -54,15 +54,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ThemThiSinh.xaml.cs">
-      <DependentUpon>ThemThiSinh.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Model\SinhVien.cs" />
+    <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="ThiSinh.cs" />
     <Compile Include="Utility.cs" />
-    <Page Include="DanhSachThiSinh.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\ChiTietSinhVien.xaml.cs">
+      <DependentUpon>ChiTietSinhVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DanhSachSinhVien.xaml.cs">
+      <DependentUpon>DanhSachSinhVien.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,14 +73,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DanhSachThiSinh.xaml.cs">
-      <DependentUpon>DanhSachThiSinh.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ThemThiSinh.xaml">
+    <Page Include="View\ChiTietSinhVien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DanhSachSinhVien.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,5 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
