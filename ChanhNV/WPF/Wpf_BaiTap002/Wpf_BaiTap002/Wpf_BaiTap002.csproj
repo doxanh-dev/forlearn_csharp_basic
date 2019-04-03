@@ -54,9 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\SinhVien.cs" />
+    <Compile Include="Model\ThiSinh.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
-    <Compile Include="ThiSinh.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\ChiTietSinhVien.xaml.cs">
@@ -64,9 +63,6 @@
     </Compile>
     <Compile Include="View\DanhSachSinhVien.xaml.cs">
       <DependentUpon>DanhSachSinhVien.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\ThemThiSinh.xaml.cs">
-      <DependentUpon>ThemThiSinh.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -85,10 +81,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DanhSachSinhVien.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ThemThiSinh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

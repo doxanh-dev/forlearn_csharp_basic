@@ -5,7 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_BaiTap002.View"
         mc:Ignorable="d"
-        Title="ChiTietSinhVien" Height="450" Width="600">
+        x:Name="chiTietSinhVien"
+        WindowStartupLocation="CenterScreen"
+        Title="ChiTietSinhVien" Height="400" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Orange"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid Margin="20,0,10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="20px"></RowDefinition>
@@ -17,7 +28,6 @@
             <RowDefinition Height="25px"></RowDefinition>
             <RowDefinition Height="40px"></RowDefinition>
         </Grid.RowDefinitions>
-
         <Grid Grid.Row="1">
             <TextBlock Name="textBlockTitle" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontWeight="Bold" FontSize="20" Text="Thêm Thí Sinh"></TextBlock>
         </Grid>
@@ -26,9 +36,9 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="100px"></ColumnDefinition>
+                    <ColumnDefinition Width="40px"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="80px"></ColumnDefinition>
+                    <ColumnDefinition Width="40px"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
@@ -41,30 +51,85 @@
                                 <ColumnDefinition Width="10px"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="1">
-                                <RadioButton GroupName="LoaiThiSinh" Name="radioButtonChuyen" IsChecked="True" Content="Chuyên"></RadioButton>
+                                <RadioButton GroupName="LoaiThiSinh"  Name="radioButtonChuyen" IsChecked="{Binding DetailItem.ThiSinhChuyen}" Content="Chuyên"></RadioButton>
                             </Grid>
                             <Grid Grid.Column="2">
-                                <RadioButton GroupName="LoaiThiSinh" Name="radioButton" IsChecked="False" Content="Siêu cúp"></RadioButton>
+                                <RadioButton GroupName="LoaiThiSinh" Name="radioButton" IsChecked="{Binding DetailItem.ThiSinhSieuCup}" Content="Siêu cúp"></RadioButton>
                             </Grid>
 
                         </Grid>
-                        <!--<StackPanel Orientation="Horizontal">
-                            <RadioButton GroupName="LoaiThiSinh" Name="radioButtonChuyen" IsChecked="True" Content="Chuyên"></RadioButton>
-                            <RadioButton GroupName="LoaiThiSinh" Name="radioButtonSieuCup" IsChecked="False" Content="Siêu cúp"></RadioButton>
-                        </StackPanel>-->
                     </GroupBox>
                 </Grid>
 
                 <Grid Grid.Column="2">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                        <TextBlock Text="Số Báo Danh"></TextBlock>
-                        <TextBox Width="100px" BorderThickness="2"></TextBox>
+                        <TextBlock Text="Số Báo Danh: "></TextBlock>
+                        <TextBox MaxLength="5" Background="Yellow" Text="{Binding DetailItem.SoBaoDanh}" Width="100px" BorderThickness="2"></TextBox>
                     </StackPanel>
                 </Grid>
-                
             </Grid>
         </Grid>
-        
-        
+
+        <Grid Grid.Row="4">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="Họ Tên: "></TextBlock>
+                        <TextBox Text="{Binding DetailItem.HoTen}" Margin="40,0,0,0" Width="300px" BorderThickness="2"></TextBox>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200px"></ColumnDefinition>
+                            <ColumnDefinition Width="10px"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Điểm bài 1: "></TextBlock>
+                                    <TextBox MaxLength="2" Text="{Binding DetailItem.DiemBai01}" Margin="20,0,0,10" BorderThickness="2" Width="100px"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Điểm bài 2: "></TextBlock>
+                                    <TextBox MaxLength="2" Text="{Binding DetailItem.DiemBai02}" Margin="20,0,0,10" BorderThickness="2" Width="100px"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Điểm bài 3: "></TextBlock>
+                                    <TextBox MaxLength="2" Text="{Binding DetailItem.DiemBai03}" Margin="20,0,0,0" BorderThickness="2" Width="100px"></TextBox>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="20,0,0,0" Text="Điểm Tiếng Anh: "></TextBlock>
+                                    <TextBox MaxLength="2" Text="{Binding DetailItem.DiemTiengAnh}" Margin="5,0,0,10" Width="100px" BorderThickness="2"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Điểm Cơ Sở Dữ liệu: "></TextBlock>
+                                    <TextBox MaxLength="2" Text="{Binding DetailItem.DiemCSDL}" Margin="7,0,0,0" Width="100px" BorderThickness="2"></TextBox>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!--Dong 5-->
+        <Grid Grid.Row="6">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Command="{Binding SaveButtonCommand}" CommandParameter="{Binding ElementName=chiTietSinhVien}" Content="Chấp nhận" BorderThickness="2" Width="100px"></Button>
+                <Button Command="{Binding CancelButtonCommand}" CommandParameter="{Binding ElementName=chiTietSinhVien}" Content="Thoát" Margin="50,0,0,0" BorderThickness="2" Width="100px"></Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

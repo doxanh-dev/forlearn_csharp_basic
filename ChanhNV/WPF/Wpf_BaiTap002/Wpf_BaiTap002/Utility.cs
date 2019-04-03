@@ -25,9 +25,9 @@ namespace Wpf_BaiTap002
         public static bool IsNull(string strCheck)
         {
             bool result = true;
-            if (!String.IsNullOrEmpty(strCheck))
+            if (string.IsNullOrEmpty(strCheck))
             {
-                result = false;
+                result = true;
             }
             return result;
         }

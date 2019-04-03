@@ -35,7 +35,7 @@
                     <TextBlock Text="Danh sách các Thí sinh Chuyên"></TextBlock>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <DataGrid ItemsSource="{Binding DanhSachSinhVienChuyen}" SelectedItem="{Binding SelectedItem}" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                    <DataGrid ItemsSource="{Binding DanhSachThiSinhChuyen}" SelectedItem="{Binding SelectedSinhVienChuyen}" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding SoBaoDanh}" Header="Số Báo Danh"  Width="100" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding HoTen}" Header="Họ Tên"  Width="*" IsReadOnly="True"></DataGridTextColumn>
@@ -44,6 +44,9 @@
                             <DataGridTextColumn Binding="{Binding DiemBai03}" Header="Điểm Bài 03"  Width="100" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding DiemTiengAnh}" Header="Điểm Tiếng Anh"  Width="100" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding TongDiem}" Header="Tổng Điểm"  Width="100" IsReadOnly="True"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ThiSinhChuyen}" Header="Thí Sinh Chuyên"  Visibility="Collapsed" IsReadOnly="True"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ThiSinhSieuCup}" Header="Thí Sinh Siêu Cúp"  Visibility="Collapsed" IsReadOnly="True"></DataGridTextColumn>
+                            
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -63,7 +66,7 @@
                     <TextBlock Text="Danh sách các Thí sinh Siêu cúp"></TextBlock>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <DataGrid ItemsSource="{Binding DanhSachSinhVienSieuCup}" SelectedItem="{Binding SelectedSinhVienSieuCup}" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                    <DataGrid ItemsSource="{Binding DanhSachThiSinhSieuCup}" SelectedItem="{Binding SelectedSinhVienSieuCup}" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding SoBaoDanh}" Header="Số Báo Danh"  Width="100" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding HoTen}" Header="Họ Tên"  Width="*" IsReadOnly="True"></DataGridTextColumn>
@@ -72,6 +75,8 @@
                             <DataGridTextColumn Binding="{Binding DiemBai03}" Header="Điểm Bài 03"  Width="100" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding DiemCSDL}" Header="Điểm Cơ Sở Dữ Liệu"  Width="*" IsReadOnly="True"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding TongDiem}" Header="Tổng Điểm"  Width="100" IsReadOnly="True"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ThiSinhChuyen}" Header="Thí Sinh Chuyên"  Visibility="Collapsed" IsReadOnly="True"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ThiSinhSieuCup}" Header="Thí Sinh Siêu Cúp"  Visibility="Collapsed" IsReadOnly="True"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -91,10 +96,10 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <Button Content="Thêm"></Button>
+                <Button Command="{Binding AddButtonCommand}" Content="Thêm"></Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button Content="Cập nhật"></Button>
+                <Button Command="{Binding EditButtonCommand}" Content="Cập nhật"></Button>
             </Grid>
             <Grid Grid.Column="4">
                 <Button  Command="{Binding DeleteButtonCommand}" Content="Xóa"></Button>
