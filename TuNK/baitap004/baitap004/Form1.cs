@@ -51,7 +51,7 @@ namespace baitap004
 
             if (string.IsNullOrEmpty(a) || string.IsNullOrEmpty(b))
             {
-                MessageBox.Show("Các tham số cần phải điền đầy đủ !");
+                MessageBox.Show("Các tham số cần phải điền đầy đủ !", "Thông báo");
                 if (string.IsNullOrEmpty(a))
                 {
                     txtA.Focus();
@@ -72,7 +72,7 @@ namespace baitap004
                 {
                     if (string.IsNullOrEmpty(c))
                     {
-                        MessageBox.Show("Các tham số cần phải điền đầy đủ !");
+                        MessageBox.Show("Các tham số cần phải điền đầy đủ !", "Thông báo");
                         txtC.Focus();
                     }
                     else
