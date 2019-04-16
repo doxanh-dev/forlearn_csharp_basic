@@ -65,6 +65,7 @@ namespace baitap004
             {
                 if (radioSelect1.Checked == true)
                 {
+                    //gọi hàm giải phương trình bậc 1
                     GiaiPhuongTrinhBac1(float.Parse(a), float.Parse(b));
                 }
                 else if (radioSelect2.Checked == true)
@@ -76,6 +77,7 @@ namespace baitap004
                     }
                     else
                     {
+                        //gọi hàm giải phương trình bậc 2
                         GiaiPhuongTrinhBac2(float.Parse(a), float.Parse(b), float.Parse(c));
                     }
                 }
@@ -108,25 +110,34 @@ namespace baitap004
         //GiaiPhuongTrinhBac2
         private void GiaiPhuongTrinhBac2(float a, float b, float c)
         {
-            var delta = (b * b) - (4 * a * c);
+            if (a != 0)
+            {
+                var delta = (b * b) - (4 * a * c);
 
-            if (delta < 0)
-            {
-                txtResule.Text = "Pt vô nghiệm";
-            }
-            else if (delta == 0)
-            {
-                var result = (-b) / (2 * a);
-                txtResule.Text = "Pt có nghiệm kép: x1=x1=" + result;
+                if (delta < 0)
+                {
+                    txtResule.Text = "Pt vô nghiệm";
+                }
+                else if (delta == 0)
+                {
+                    var result = (-b) / (2 * a);
+                    float x1c = (float)Math.Round(result * 100f) / 100f;
+                    txtResule.Text = "Pt có nghiệm kép: x1=x1=" + x1c;
+                }
+                else
+                {
+                    var x1 = (-b + Math.Sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.Sqrt(delta)) / (2 * a);
+
+                    float x1c = (float)Math.Round(x1 * 100f) / 100f;
+                    float x2c = (float)Math.Round(x2 * 100f) / 100f;
+                    txtResule.Text = "Pt có 2 nghiệm: x1=" + x1c + " và x2=" + x2c;
+                }
             }
             else
             {
-                var x1 = (-b + Math.Sqrt(delta)) / (2 * a);
-                var x2 = (-b - Math.Sqrt(delta)) / (2 * a);
-
-                float x1c = (float)Math.Round(x1 * 100f) / 100f;
-                float x2c = (float)Math.Round(x2 * 100f) / 100f;
-                txtResule.Text = "Pt có 2 nghiệm: x1=" + x1c + " và x2=" + x2c;
+                //gọi hàm giải phương trình bậc 1
+                GiaiPhuongTrinhBac1(b, c);
             }
         }
 
