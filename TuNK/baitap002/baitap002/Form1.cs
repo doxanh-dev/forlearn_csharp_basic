@@ -59,7 +59,7 @@ namespace baitap002
                 || string.IsNullOrEmpty(month)
                 || string.IsNullOrEmpty(year))
             {
-                MessageBox.Show("Bạn phải điền đủ thông tin");
+                MessageBox.Show("Bạn phải điền đủ thông tin","Thông báo");
             }
             else
             {

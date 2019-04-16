@@ -31,6 +31,7 @@ namespace baitap006
             if (string.IsNullOrEmpty(kyTu))
             {
                 MessageBox.Show("Vui lòng điền ký tự");
+                txtKyTu.Focus();
             }
             else
             {
@@ -47,6 +48,7 @@ namespace baitap006
             if (string.IsNullOrEmpty(kyTu))
             {
                 MessageBox.Show("Vui lòng điền ký tự");
+                txtKyTu.Focus();
             }
             else
             {
