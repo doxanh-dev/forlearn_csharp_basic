@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace baitap002
@@ -38,15 +45,6 @@ namespace baitap002
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có muốn thoát hay không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
         private void btnXem_Click(object sender, EventArgs e)
         {
             var hoTen = textHoTen.Text;
@@ -67,6 +65,15 @@ namespace baitap002
             {
                 var result = hoTen + "\n" + day + "/" + month + "/" + year + "\n" + soThich;
                 textResult.Text = result;
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }
