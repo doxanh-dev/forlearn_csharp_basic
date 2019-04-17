@@ -62,6 +62,27 @@ namespace Wpf_BaiTap003.ViewModel
             }
         }
 
+        public NhanVien _selectItem;
+
+        public NhanVien SelectItem
+        {
+            get => _selectItem;
+            set
+            {
+                NotifyPropertyChanging("SelectItem");
+                _selectItem = value;
+                if(_selectItem != null)
+                {
+                    DetailItem.MaNhanVien = _selectItem.MaNhanVien;
+                    DetailItem.HoTen = _selectItem.HoTen;
+                    DetailItem.NgaySinh = _selectItem.NgaySinh;
+                    DetailItem.DiaChi = _selectItem.DiaChi;
+                }
+                
+                NotifyPropertyChanged("SelectItem");
+            }
+        }
+
         public MainViewModel()
         {
             addButtonCommand = new RelayCommand.RelayCommand(AddNhanVienCommand, param => this.canExecute);
@@ -87,6 +108,28 @@ namespace Wpf_BaiTap003.ViewModel
             if(nhanVienTonTai == null)
             {
                 MessageBox.Show("Không tồn tại nhân viên để cập nhật");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(_detailItem.HoTen))
+                {
+                    MessageBox.Show("Bạn chưa nhập họ tên");
+                    return;
+                }
+                else
+                {
+                    SelectItem.HoTen = DetailItem.HoTen;
+                }
+                if (string.IsNullOrEmpty(_detailItem.DiaChi))
+                {
+                    MessageBox.Show("Bạn chưa nhập địa chỉ");
+                }
+                else
+                {
+                    SelectItem.NgaySinh = DetailItem.NgaySinh;
+                }
+                
+                SelectItem.DiaChi = DetailItem.DiaChi;
             }
         }
 
@@ -118,8 +161,7 @@ namespace Wpf_BaiTap003.ViewModel
                         MessageBox.Show("Bạn chưa nhập địa chỉ");
                         return;
                     }
-                    DanhSachNhanVien.Add(_detailItem);
-                    _detailItem = null;
+                    DanhSachNhanVien.Add((NhanVien)_detailItem.Clone());
                 }
             }
         }
@@ -139,8 +181,7 @@ namespace Wpf_BaiTap003.ViewModel
             {
                 if (_detailItem != null)
                 {
-                    DanhSachNhanVien.Remove(_detailItem);
-                    _detailItem = null;
+                    DanhSachNhanVien.Remove(_selectItem);
                 }
             }
 

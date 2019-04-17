@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Wpf_BaiTap003.Model
 {
-    class NhanVien : INotifyPropertyChanged
+    class NhanVien : INotifyPropertyChanged, ICloneable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -17,6 +17,11 @@ namespace Wpf_BaiTap003.Model
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
 
         private string _maNhanVien;
