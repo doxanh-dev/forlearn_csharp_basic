@@ -174,7 +174,7 @@ namespace Wpf_BaiTap003.ViewModel
         {
             if(_detailItem == null)
             {
-                MessageBox.Show("Please choose record for edit!");
+                MessageBox.Show("Bạn chưa chọn nhân viên để xóa!");
                 return;
             }
             if (MessageBoxResult.Yes == MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên này?", "Question delete?", MessageBoxButton.YesNo))
@@ -192,7 +192,7 @@ namespace Wpf_BaiTap003.ViewModel
         public ICommand CancelButtonCommand { get => cancelButtonCommand; set => cancelButtonCommand = value; }
         public void CloseCommand(object obj)
         {
-            if (MessageBoxResult.Yes == MessageBox.Show("Do you want close window?", "Question close?", MessageBoxButton.YesNo))
+            if (MessageBoxResult.Yes == MessageBox.Show("Bạn chắc chắn muốn thoát?", "Question close?", MessageBoxButton.YesNo))
             {
                 ((Window)obj).Close();
             }
