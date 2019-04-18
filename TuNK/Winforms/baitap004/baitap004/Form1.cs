@@ -164,7 +164,8 @@ namespace baitap004
                 e.Handled = true;
             }
 
-            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') > -1)
+            // only allow minus sign at the beginning
+            if (e.KeyChar == '-' && (sender as TextBox).Text.Length > 0)
             {
                 e.Handled = true;
             }
