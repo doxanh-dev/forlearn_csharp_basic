@@ -29,10 +29,50 @@ namespace baitap008
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtKq1.Text = "12";
-            txtKq2.Text = "12";
-            txtKq3.Text = "12";
-            txtKq4.Text = "12";
+            var soN = txtSoN.Text;
+            var soX = txtSoX.Text;
+
+            if (string.IsNullOrEmpty(soN) || string.IsNullOrEmpty(soX))
+            {
+                MessageBox.Show("Bạn phải nhập đủ số X hoặc sô N", "Thông báo");
+                if (string.IsNullOrEmpty(soN))
+                {
+                    txtSoN.Focus();
+                }
+                else
+                {
+                    txtSoX.Focus();
+                }
+            }
+            else
+            {
+                var kq1 = string.Empty;
+                var kq2 = string.Empty;
+                var kq3 = string.Empty;
+                var kq4 = 0;
+
+                int temp = 0;
+
+                for(int i = 1; i <= int.Parse(soN); i++)
+                {
+                    temp = 0;
+                    kq1 += "X^" + i + " + ";
+                    kq2 += int.Parse(soX) + "^" + i + " + ";
+
+                    temp = (int) Math.Pow(int.Parse(soX), i);
+                    kq3 += temp + " + ";
+                    kq4 += temp;
+                }
+
+                kq1 = kq1.Substring(0, kq1.Length - 3);
+                kq2 = kq2.Substring(0, kq2.Length - 3);
+                kq3 = kq3.Substring(0, kq3.Length - 3);
+
+                txtKq1.Text = kq1;
+                txtKq2.Text = kq2;
+                txtKq3.Text = kq3;
+                txtKq4.Text = kq4.ToString();
+            }
         }
 
         //check only number for TextBox

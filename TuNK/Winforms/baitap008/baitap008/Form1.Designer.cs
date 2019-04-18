@@ -58,7 +58,7 @@
             // txtSoN
             // 
             this.txtSoN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtSoN.ForeColor = System.Drawing.Color.Red;
+            this.txtSoN.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtSoN.Location = new System.Drawing.Point(219, 26);
             this.txtSoN.MaxLength = 2;
             this.txtSoN.Name = "txtSoN";
@@ -118,11 +118,11 @@
             // 
             // txtKq3
             // 
-            this.txtKq3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtKq3.ForeColor = System.Drawing.Color.Blue;
+            this.txtKq3.Enabled = false;
+            this.txtKq3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKq3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtKq3.Location = new System.Drawing.Point(43, 92);
             this.txtKq3.Name = "txtKq3";
-            this.txtKq3.ReadOnly = true;
             this.txtKq3.Size = new System.Drawing.Size(330, 26);
             this.txtKq3.TabIndex = 11;
             // 
@@ -139,11 +139,11 @@
             // 
             // txtKq4
             // 
-            this.txtKq4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtKq4.ForeColor = System.Drawing.Color.Red;
+            this.txtKq4.Enabled = false;
+            this.txtKq4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKq4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtKq4.Location = new System.Drawing.Point(43, 124);
             this.txtKq4.Name = "txtKq4";
-            this.txtKq4.ReadOnly = true;
             this.txtKq4.Size = new System.Drawing.Size(330, 26);
             this.txtKq4.TabIndex = 9;
             // 
@@ -160,11 +160,11 @@
             // 
             // txtKq2
             // 
-            this.txtKq2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtKq2.ForeColor = System.Drawing.Color.Red;
+            this.txtKq2.Enabled = false;
+            this.txtKq2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKq2.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtKq2.Location = new System.Drawing.Point(43, 60);
             this.txtKq2.Name = "txtKq2";
-            this.txtKq2.ReadOnly = true;
             this.txtKq2.Size = new System.Drawing.Size(330, 26);
             this.txtKq2.TabIndex = 7;
             // 
@@ -181,11 +181,11 @@
             // 
             // txtKq1
             // 
-            this.txtKq1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtKq1.ForeColor = System.Drawing.Color.Blue;
+            this.txtKq1.Enabled = false;
+            this.txtKq1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKq1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtKq1.Location = new System.Drawing.Point(43, 30);
             this.txtKq1.Name = "txtKq1";
-            this.txtKq1.ReadOnly = true;
             this.txtKq1.Size = new System.Drawing.Size(330, 26);
             this.txtKq1.TabIndex = 6;
             // 
