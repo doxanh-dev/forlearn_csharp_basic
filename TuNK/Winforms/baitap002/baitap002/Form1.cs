@@ -63,8 +63,18 @@ namespace baitap002
             }
             else
             {
-                var result = hoTen + "\n" + day + "/" + month + "/" + year + "\n" + soThich;
-                textResult.Text = result;
+                try
+                {
+                    var time = day + "/" + month + "/" + year;
+                    DateTime.ParseExact(time, "d/M/yyyy", null);
+                    var result = hoTen + "\n" + time + "\n" + soThich;                    
+                    textResult.Text = result;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ngày chọn không đúng định dạng", "Thông báo");
+                }
+                
             }
         }
 
