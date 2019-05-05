@@ -37,6 +37,11 @@ namespace baitap015
             checkOnlyNumberTextbox(sender, e);
         }
 
+        /// <summary>
+        /// sự kiện click button Cộng
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCong_Click(object sender, EventArgs e)
         {
             var tuSo1 = txtTuSo1.Text;
@@ -50,11 +55,15 @@ namespace baitap015
                 var kqMauSo = int.Parse(mauSo1) * int.Parse(mauSo2);
 
                 grBoxKQ.Text = "Kết quả Cộng";
-                txtKQTuSo.Text = kqTuSo.ToString();
-                txtKQMauSo.Text = kqMauSo.ToString();
+                rutGon(kqTuSo, kqMauSo);
             }
         }
 
+        /// <summary>
+        /// sự kiện click button Trừ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTru_Click(object sender, EventArgs e)
         {
             var tuSo1 = txtTuSo1.Text;
@@ -68,11 +77,15 @@ namespace baitap015
                 var kqMauSo = int.Parse(mauSo1) * int.Parse(mauSo2);
 
                 grBoxKQ.Text = "Kết quả Trừ";
-                txtKQTuSo.Text = kqTuSo.ToString();
-                txtKQMauSo.Text = kqMauSo.ToString();
+                rutGon(kqTuSo, kqMauSo);
             }
         }
 
+        /// <summary>
+        /// sự kiện click button Nhân
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNhan_Click(object sender, EventArgs e)
         {
             var tuSo1 = txtTuSo1.Text;
@@ -86,11 +99,15 @@ namespace baitap015
                 var kqMauSo = int.Parse(mauSo1) * int.Parse(mauSo2);
 
                 grBoxKQ.Text = "Kết quả Nhân";
-                txtKQTuSo.Text = kqTuSo.ToString();
-                txtKQMauSo.Text = kqMauSo.ToString();
+                rutGon(kqTuSo, kqMauSo);
             }
         }
 
+        /// <summary>
+        /// sự kiện click button Chia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnChia_Click(object sender, EventArgs e)
         {
             var tuSo1 = txtTuSo1.Text;
@@ -104,11 +121,15 @@ namespace baitap015
                 var kqMauSo = int.Parse(mauSo1) * int.Parse(tuSo2);
 
                 grBoxKQ.Text = "Kết quả Chia";
-                txtKQTuSo.Text = kqTuSo.ToString();
-                txtKQMauSo.Text = kqMauSo.ToString();
+                rutGon(kqTuSo, kqMauSo);
             }
         }
 
+        /// <summary>
+        /// sự kiện click button Tiếp tục
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnTiepTuc_Click(object sender, EventArgs e)
         {
             txtTuSo1.Text = "";
@@ -121,6 +142,11 @@ namespace baitap015
             txtTuSo1.Focus();
         }
 
+        /// <summary>
+        /// sự kiện click button Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn muốn thoát không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -175,6 +201,23 @@ namespace baitap015
             return result;
         }
 
+        private void rutGon(int tuSo, int mauSo)
+        {
+            int i = 0;
+            if (tuSo < 0)
+            {
+                int tuSoTemp = tuSo * -1;
+                i = timUCLN(tuSoTemp, mauSo);
+            }
+            else
+            {
+                i = timUCLN(tuSo, mauSo);
+            }
+            
+            txtKQTuSo.Text = (tuSo / i).ToString();
+            txtKQMauSo.Text = (mauSo / i).ToString();
+        }
+
         /// <summary>
         /// checkOnlyNumberTextbox
         /// </summary>
@@ -186,6 +229,34 @@ namespace baitap015
             {
                 e.Handled = true;
             }
+        }
+
+        /// <summary>
+        /// timUCLN
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        private int timUCLN(int a, int b)
+        {
+            int result = 0;
+            if (a == 0 || b == 0)
+            {
+                result = a + b;
+            }
+            while (a != b)
+            {
+                if (a > b)
+                {
+                    a -= b;
+                }
+                else
+                {
+                    b -= a;
+                }
+            }
+            result = a;
+            return result;
         }
     }
 }
