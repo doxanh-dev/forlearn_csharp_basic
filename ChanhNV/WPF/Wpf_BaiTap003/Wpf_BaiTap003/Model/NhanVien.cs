@@ -26,7 +26,7 @@ namespace Wpf_BaiTap003.Model
 
         private string _maNhanVien;
         private string _hoTen;
-        private int _ngaySinh;
+        private DateTime _ngaySinh;
         private string _diaChi;
 
         public string MaNhanVien
@@ -49,7 +49,7 @@ namespace Wpf_BaiTap003.Model
             }
         }
 
-        public int NgaySinh
+        public DateTime NgaySinh
         {
             get => _ngaySinh;
             set

@@ -40,7 +40,7 @@
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,5">
                                 <TextBlock Width="80" Text="Ngày sinh: "></TextBlock>
-                                <TextBox PreviewTextInput="NumberValidationTextBox" MaxLength="8" Text="{Binding DetailItem.NgaySinh}" Name="textBoxNgaySinh" Width="200" BorderThickness="2"></TextBox>
+                                <DatePicker Text="{Binding DetailItem.NgaySinh, Mode=TwoWay}"></DatePicker>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,5">
                                 <TextBlock Width="80" Text="Địa chỉ: "></TextBlock>

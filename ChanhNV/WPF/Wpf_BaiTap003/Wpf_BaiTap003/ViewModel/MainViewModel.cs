@@ -94,9 +94,12 @@ namespace Wpf_BaiTap003.ViewModel
         public void LoadDanhSachNhanVien()
         {
             ObservableCollection<NhanVien> nhanViens = new ObservableCollection<NhanVien>();
-            nhanViens.Add(new NhanVien { MaNhanVien = "1", HoTen = "Nguyen Van A", NgaySinh = 20190502, DiaChi = "Ha Noi" });
-            nhanViens.Add(new NhanVien { MaNhanVien = "2", HoTen = "Nguyen Van B", NgaySinh = 20190402, DiaChi = "Ha Noi" });
-            nhanViens.Add(new NhanVien { MaNhanVien = "3", HoTen = "Nguyen Van C", NgaySinh = 20190302, DiaChi = "Ha Noi" });
+            nhanViens.Add(new NhanVien { MaNhanVien = "1", HoTen = "Nguyen Van A", NgaySinh = DateTime.Now, DiaChi = "Ha Noi" });
+            nhanViens.Add(new NhanVien { MaNhanVien = "2", HoTen = "Nguyen Van B", NgaySinh = DateTime.Now, DiaChi = "Ha Noi" });
+            nhanViens.Add(new NhanVien { MaNhanVien = "3", HoTen = "Nguyen Van C", NgaySinh = DateTime.Now, DiaChi = "Ha Noi" });
+
+            DetailItem = new NhanVien();
+            DetailItem.NgaySinh = DateTime.Now;
 
             DanhSachNhanVien = nhanViens;
         }
