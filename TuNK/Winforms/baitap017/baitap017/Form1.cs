@@ -17,6 +17,21 @@ namespace baitap017
             InitializeComponent();
         }
 
+        private void txtHTGNhapA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
+        private void txtHTGNhapB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
+        private void txtHTGNhapC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
         private void rdoHVuong_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhVuong.Show();
@@ -184,6 +199,19 @@ namespace baitap017
             if (result == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        /// <summary>
+        /// checkOnlyNumberTextbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkOnlyNumberTextbox(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

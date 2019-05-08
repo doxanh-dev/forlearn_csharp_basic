@@ -63,6 +63,10 @@
             this.txtHCNNhapA = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.grpHinhTamGiac = new System.Windows.Forms.GroupBox();
+            this.txtLaTamGiac = new System.Windows.Forms.TextBox();
+            this.txtHTGNhapC = new System.Windows.Forms.TextBox();
+            this.txtHTGNhapB = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.txtHTGChuVi = new System.Windows.Forms.TextBox();
             this.txtHTGDienTich = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -70,10 +74,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtHTGNhapA = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtHTGNhapB = new System.Windows.Forms.TextBox();
-            this.txtHTGNhapC = new System.Windows.Forms.TextBox();
-            this.txtLaTamGiac = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.grpHinhVuong.SuspendLayout();
             this.grpHinhTron.SuspendLayout();
@@ -446,6 +446,39 @@
             this.grpHinhTamGiac.TabStop = false;
             this.grpHinhTamGiac.Text = "Hình Tam Giác";
             // 
+            // txtLaTamGiac
+            // 
+            this.txtLaTamGiac.Enabled = false;
+            this.txtLaTamGiac.Location = new System.Drawing.Point(24, 161);
+            this.txtLaTamGiac.Name = "txtLaTamGiac";
+            this.txtLaTamGiac.Size = new System.Drawing.Size(249, 26);
+            this.txtLaTamGiac.TabIndex = 11;
+            // 
+            // txtHTGNhapC
+            // 
+            this.txtHTGNhapC.Location = new System.Drawing.Point(206, 53);
+            this.txtHTGNhapC.Name = "txtHTGNhapC";
+            this.txtHTGNhapC.Size = new System.Drawing.Size(65, 26);
+            this.txtHTGNhapC.TabIndex = 10;
+            this.txtHTGNhapC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHTGNhapC_KeyPress);
+            // 
+            // txtHTGNhapB
+            // 
+            this.txtHTGNhapB.Location = new System.Drawing.Point(115, 53);
+            this.txtHTGNhapB.Name = "txtHTGNhapB";
+            this.txtHTGNhapB.Size = new System.Drawing.Size(65, 26);
+            this.txtHTGNhapB.TabIndex = 9;
+            this.txtHTGNhapB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHTGNhapB_KeyPress);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(206, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(65, 19);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Nhập C :";
+            // 
             // txtHTGChuVi
             // 
             this.txtHTGChuVi.Enabled = false;
@@ -495,6 +528,7 @@
             this.txtHTGNhapA.Name = "txtHTGNhapA";
             this.txtHTGNhapA.Size = new System.Drawing.Size(65, 26);
             this.txtHTGNhapA.TabIndex = 1;
+            this.txtHTGNhapA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHTGNhapA_KeyPress);
             // 
             // label17
             // 
@@ -504,37 +538,6 @@
             this.label17.Size = new System.Drawing.Size(63, 19);
             this.label17.TabIndex = 0;
             this.label17.Text = "Nhập A :";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(206, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 19);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "Nhập C :";
-            // 
-            // txtHTGNhapB
-            // 
-            this.txtHTGNhapB.Location = new System.Drawing.Point(115, 53);
-            this.txtHTGNhapB.Name = "txtHTGNhapB";
-            this.txtHTGNhapB.Size = new System.Drawing.Size(65, 26);
-            this.txtHTGNhapB.TabIndex = 9;
-            // 
-            // txtHTGNhapC
-            // 
-            this.txtHTGNhapC.Location = new System.Drawing.Point(206, 53);
-            this.txtHTGNhapC.Name = "txtHTGNhapC";
-            this.txtHTGNhapC.Size = new System.Drawing.Size(65, 26);
-            this.txtHTGNhapC.TabIndex = 10;
-            // 
-            // txtLaTamGiac
-            // 
-            this.txtLaTamGiac.Enabled = false;
-            this.txtLaTamGiac.Location = new System.Drawing.Point(24, 161);
-            this.txtLaTamGiac.Name = "txtLaTamGiac";
-            this.txtLaTamGiac.Size = new System.Drawing.Size(249, 26);
-            this.txtLaTamGiac.TabIndex = 11;
             // 
             // Form1
             // 
