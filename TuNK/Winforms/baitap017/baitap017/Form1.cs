@@ -32,6 +32,26 @@ namespace baitap017
             checkOnlyNumberTextbox(sender, e);
         }
 
+        private void txtHCNNhapA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
+        private void txtHCNNhapB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
+        private void txtHTBanKinh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
+        private void txtHVCanhA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkOnlyNumberTextbox(sender, e);
+        }
+
         private void rdoHVuong_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhVuong.Show();
@@ -65,6 +85,7 @@ namespace baitap017
             grpHinhChuNhat.Hide();
             grpHinhTron.Hide();
             grpHinhVuong.Hide();
+            txtHTGNhapA.Focus();
         }
 
         private void btnThucHien_Click(object sender, EventArgs e)
@@ -152,7 +173,41 @@ namespace baitap017
                 }
                 else
                 {
+                    var intA = float.Parse(canhA);
+                    var intB = float.Parse(canhB);
+                    var intC = float.Parse(canhC);
 
+                    if ((intA + intB > intC) || (intB + intC > intA) || (intA + intC > intB))
+                    {
+                        var dienTichHTG = (intA + intB + intC) / 2;
+                        var chuViHTG = Math.Round(Math.Sqrt(dienTichHTG * (dienTichHTG - intA) * (dienTichHTG - intB) * (dienTichHTG - intC)), 2);
+
+                        if ((intA == intB) || (intB == intC) || (intC == intA))
+                        {
+                            txtLaTamGiac.Text = "Đây là tam giác cân";
+                        }
+                        else if ((intA == intB) && (intB == intC) && (intC == intA))
+                        {
+                            txtLaTamGiac.Text = "Đây là tam giác đều";
+                        }
+                        else if ((intA * intA == intB * intB + intC * intC)
+                                || (intB * intB == intA * intA + intC * intC)
+                                || (intC * intC == intB * intB + intA * intA))
+                        {
+                            txtLaTamGiac.Text = "Đây là tam giác vuông";
+                        }
+                        else
+                        {
+                            txtLaTamGiac.Text = "Đây là tam giác thường";
+                        }
+
+                        txtHTGChuVi.Text = chuViHTG.ToString();
+                        txtHTGDienTich.Text = dienTichHTG.ToString();
+                    }
+                    else
+                    {
+                        txtLaTamGiac.Text = "Không phải là tam giác";
+                    }
                 }
             }
         }

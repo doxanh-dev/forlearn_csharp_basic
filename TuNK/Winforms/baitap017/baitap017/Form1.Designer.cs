@@ -262,9 +262,11 @@
             // txtHVCanhA
             // 
             this.txtHVCanhA.Location = new System.Drawing.Point(123, 27);
+            this.txtHVCanhA.MaxLength = 2;
             this.txtHVCanhA.Name = "txtHVCanhA";
             this.txtHVCanhA.Size = new System.Drawing.Size(149, 26);
             this.txtHVCanhA.TabIndex = 1;
+            this.txtHVCanhA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHVCanhA_KeyPress);
             // 
             // label4
             // 
@@ -328,9 +330,11 @@
             // txtHTBanKinh
             // 
             this.txtHTBanKinh.Location = new System.Drawing.Point(123, 27);
+            this.txtHTBanKinh.MaxLength = 2;
             this.txtHTBanKinh.Name = "txtHTBanKinh";
             this.txtHTBanKinh.Size = new System.Drawing.Size(149, 26);
             this.txtHTBanKinh.TabIndex = 1;
+            this.txtHTBanKinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHTBanKinh_KeyPress);
             // 
             // label9
             // 
@@ -396,9 +400,11 @@
             // txtHCNNhapB
             // 
             this.txtHCNNhapB.Location = new System.Drawing.Point(123, 59);
+            this.txtHCNNhapB.MaxLength = 2;
             this.txtHCNNhapB.Name = "txtHCNNhapB";
             this.txtHCNNhapB.Size = new System.Drawing.Size(149, 26);
             this.txtHCNNhapB.TabIndex = 3;
+            this.txtHCNNhapB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHCNNhapB_KeyPress);
             // 
             // label11
             // 
@@ -412,9 +418,11 @@
             // txtHCNNhapA
             // 
             this.txtHCNNhapA.Location = new System.Drawing.Point(123, 27);
+            this.txtHCNNhapA.MaxLength = 2;
             this.txtHCNNhapA.Name = "txtHCNNhapA";
             this.txtHCNNhapA.Size = new System.Drawing.Size(149, 26);
             this.txtHCNNhapA.TabIndex = 1;
+            this.txtHCNNhapA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHCNNhapA_KeyPress);
             // 
             // label12
             // 
@@ -457,6 +465,7 @@
             // txtHTGNhapC
             // 
             this.txtHTGNhapC.Location = new System.Drawing.Point(206, 53);
+            this.txtHTGNhapC.MaxLength = 2;
             this.txtHTGNhapC.Name = "txtHTGNhapC";
             this.txtHTGNhapC.Size = new System.Drawing.Size(65, 26);
             this.txtHTGNhapC.TabIndex = 10;
@@ -465,6 +474,7 @@
             // txtHTGNhapB
             // 
             this.txtHTGNhapB.Location = new System.Drawing.Point(115, 53);
+            this.txtHTGNhapB.MaxLength = 2;
             this.txtHTGNhapB.Name = "txtHTGNhapB";
             this.txtHTGNhapB.Size = new System.Drawing.Size(65, 26);
             this.txtHTGNhapB.TabIndex = 9;
@@ -525,6 +535,7 @@
             // txtHTGNhapA
             // 
             this.txtHTGNhapA.Location = new System.Drawing.Point(24, 53);
+            this.txtHTGNhapA.MaxLength = 2;
             this.txtHTGNhapA.Name = "txtHTGNhapA";
             this.txtHTGNhapA.Size = new System.Drawing.Size(65, 26);
             this.txtHTGNhapA.TabIndex = 1;
