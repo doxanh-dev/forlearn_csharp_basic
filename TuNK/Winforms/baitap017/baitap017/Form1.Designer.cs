@@ -135,7 +135,6 @@
             this.rdoHTron.Name = "rdoHTron";
             this.rdoHTron.Size = new System.Drawing.Size(87, 23);
             this.rdoHTron.TabIndex = 3;
-            this.rdoHTron.TabStop = true;
             this.rdoHTron.Text = "Hình Tròn";
             this.rdoHTron.UseVisualStyleBackColor = true;
             this.rdoHTron.CheckedChanged += new System.EventHandler(this.rdoHTron_CheckedChanged);
@@ -147,7 +146,6 @@
             this.rdoHChuNhat.Name = "rdoHChuNhat";
             this.rdoHChuNhat.Size = new System.Drawing.Size(120, 23);
             this.rdoHChuNhat.TabIndex = 2;
-            this.rdoHChuNhat.TabStop = true;
             this.rdoHChuNhat.Text = "Hình Chữ Nhật";
             this.rdoHChuNhat.UseVisualStyleBackColor = true;
             this.rdoHChuNhat.CheckedChanged += new System.EventHandler(this.rdoHChuNhat_CheckedChanged);
@@ -159,7 +157,6 @@
             this.rdoHTamGiac.Name = "rdoHTamGiac";
             this.rdoHTamGiac.Size = new System.Drawing.Size(117, 23);
             this.rdoHTamGiac.TabIndex = 1;
-            this.rdoHTamGiac.TabStop = true;
             this.rdoHTamGiac.Text = "Hình Tam Giác";
             this.rdoHTamGiac.UseVisualStyleBackColor = true;
             this.rdoHTamGiac.CheckedChanged += new System.EventHandler(this.rdoHTamGiac_CheckedChanged);
@@ -171,7 +168,6 @@
             this.rdoHVuong.Name = "rdoHVuong";
             this.rdoHVuong.Size = new System.Drawing.Size(98, 23);
             this.rdoHVuong.TabIndex = 0;
-            this.rdoHVuong.TabStop = true;
             this.rdoHVuong.Text = "Hình Vuông";
             this.rdoHVuong.UseVisualStyleBackColor = true;
             this.rdoHVuong.CheckedChanged += new System.EventHandler(this.rdoHVuong_CheckedChanged);

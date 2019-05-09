@@ -15,6 +15,10 @@ namespace baitap017
         public Form1()
         {
             InitializeComponent();
+            grpHinhVuong.Hide();
+            grpHinhTron.Hide();
+            grpHinhChuNhat.Hide();
+            grpHinhTamGiac.Hide();
         }
 
         private void txtHTGNhapA_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,6 +56,11 @@ namespace baitap017
             checkOnlyNumberTextbox(sender, e);
         }
 
+        /// <summary>
+        /// rdoHVuong_CheckedChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rdoHVuong_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhVuong.Show();
@@ -61,6 +70,11 @@ namespace baitap017
             txtHVCanhA.Focus();
         }
 
+        /// <summary>
+        /// rdoHTron_CheckedChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rdoHTron_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhTron.Show();
@@ -70,6 +84,11 @@ namespace baitap017
             txtHTBanKinh.Focus();
         }
 
+        /// <summary>
+        /// rdoHChuNhat_CheckedChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rdoHChuNhat_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhChuNhat.Show();
@@ -79,6 +98,11 @@ namespace baitap017
             txtHCNNhapA.Focus();
         }
 
+        /// <summary>
+        /// rdoHTamGiac_CheckedChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rdoHTamGiac_CheckedChanged(object sender, EventArgs e)
         {
             grpHinhTamGiac.Show();
@@ -88,6 +112,11 @@ namespace baitap017
             txtHTGNhapA.Focus();
         }
 
+        /// <summary>
+        /// Sự kiện click button Thực hiện
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThucHien_Click(object sender, EventArgs e)
         {
             if (rdoHVuong.Checked)
@@ -182,13 +211,13 @@ namespace baitap017
                         var dienTichHTG = (intA + intB + intC) / 2;
                         var chuViHTG = Math.Round(Math.Sqrt(dienTichHTG * (dienTichHTG - intA) * (dienTichHTG - intB) * (dienTichHTG - intC)), 2);
 
-                        if ((intA == intB) || (intB == intC) || (intC == intA))
-                        {
-                            txtLaTamGiac.Text = "Đây là tam giác cân";
-                        }
-                        else if ((intA == intB) && (intB == intC) && (intC == intA))
+                        if ((intA == intB) && (intB == intC))
                         {
                             txtLaTamGiac.Text = "Đây là tam giác đều";
+                        }
+                        else if ((intA == intB) || (intB == intC) || (intC == intA))
+                        {
+                            txtLaTamGiac.Text = "Đây là tam giác cân";
                         }
                         else if ((intA * intA == intB * intB + intC * intC)
                                 || (intB * intB == intA * intA + intC * intC)
@@ -212,6 +241,11 @@ namespace baitap017
             }
         }
 
+        /// <summary>
+        /// Sự kiện click button Reset
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             if (rdoHVuong.Checked)
@@ -248,6 +282,11 @@ namespace baitap017
             }
         }
 
+        /// <summary>
+        /// Sự kiện click button Thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn muốn thoát đúng không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
